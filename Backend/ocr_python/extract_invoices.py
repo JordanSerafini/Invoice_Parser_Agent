@@ -5,10 +5,12 @@ from PIL import Image
 from transformers import pipeline
 from dotenv import load_dotenv
 import re
+from huggingface_hub import login
 
-# Charger clé API Hugging Face
+# Charger clé API Hugging Face et se connecter
 load_dotenv()
 hf_token = os.getenv('HUGGING_FACE_TOKEN')
+login(token=hf_token)
 
 # Dossier de factures et résultats
 invoice_dir = './Factures'
@@ -16,11 +18,10 @@ results_dir = './Factures/Resultats'
 
 os.makedirs(results_dir, exist_ok=True)
 
-# Initialiser pipeline HF avec Mistral
+# Initialiser pipeline HF avec un modèle ouvert
 pipe = pipeline(
     "text-generation",
-    model="mistralai/Mistral-7B-Instruct-v0.2",
-    token=hf_token,
+    model="facebook/opt-1.3b",  # Modèle ouvert qui ne nécessite pas d'authentification
     device_map="auto"
 )
 
@@ -36,38 +37,36 @@ def clean_text(text):
     text = re.sub(r'[^\x20-\x7E\u00C0-\u00FF]', '', text)
     return text.strip()
 
-# Fonction pour générer le prompt à Mistral
+# Fonction pour générer le prompt
 def generate_prompt(text):
-    prompt = f"""
-    [INST] Voici un texte OCR d'une facture française :
+    prompt = f"""Extrait les informations suivantes de cette facture française:
 
-    {text}
+{text}
 
-    Extrais strictement les informations suivantes au format JSON sans aucun texte supplémentaire :
-    {{
-        "numéro_facture": "string",
-        "date_facture": "JJ/MM/AAAA",
-        "nom_fournisseur": "string",
-        "adresse_fournisseur": "string complète",
-        "articles": [
-            {{
-                "description": "string",
-                "quantité": nombre entier,
-                "prix_unitaire_ht": nombre décimal,
-                "montant_ht": nombre décimal
-            }}
-        ],
-        "remise": nombre décimal négatif ou 0,
-        "total_ht": nombre décimal,
-        "total_tva": nombre décimal,
-        "total_ttc": nombre décimal,
-        "mode_règlement": "string",
-        "date_échéance": "JJ/MM/AAAA",
-        "iban": "IBAN",
-        "bic": "BIC"
-    }} [/INST]
-    """
-    return prompt.strip()
+Format JSON attendu:
+{{
+    "numéro_facture": "string",
+    "date_facture": "JJ/MM/AAAA",
+    "nom_fournisseur": "string",
+    "adresse_fournisseur": "string complète",
+    "articles": [
+        {{
+            "description": "string",
+            "quantité": nombre entier,
+            "prix_unitaire_ht": nombre décimal,
+            "montant_ht": nombre décimal
+        }}
+    ],
+    "remise": nombre décimal négatif ou 0,
+    "total_ht": nombre décimal,
+    "total_tva": nombre décimal,
+    "total_ttc": nombre décimal,
+    "mode_règlement": "string",
+    "date_échéance": "JJ/MM/AAAA",
+    "iban": "IBAN",
+    "bic": "BIC"
+}}"""
+    return prompt
 
 # Traitement des factures
 for filename in os.listdir(invoice_dir):
@@ -79,10 +78,10 @@ for filename in os.listdir(invoice_dir):
         raw_text = ocr_image(invoice_path)
         clean_ocr = clean_text(raw_text)
 
-        # Prompt HF
+        # Préparation du prompt
         prompt = generate_prompt(clean_ocr)
 
-        # Appel à Mistral
+        # Appel au modèle
         try:
             result = pipe(
                 prompt,
