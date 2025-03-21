@@ -1,0 +1,27 @@
+{
+  "numéro_facture": "A246",
+  "date_facture": "02/15/16",
+  "nom_fournisseur": "Sourkogo",
+  "adresse_fournisseur": "123, rue Principale, Hamilton, OH 44416",
+  "articles": [
+    {
+      "description": "Consultation",
+      "quantité": 1,
+      "prix_unitaire_ht": 150,
+      "montant_ht": 150
+    },
+    {
+      "description": "Design",
+      "quantité": 7,
+      "prix_unitaire_ht": 80,
+      "montant_ht": 560
+    }
+  ],
+  "total_ht": 680,
+  "total_tva": 25.84,
+  "total_ttc": 7058.4,
+  "mode_reglement": "Net 30 jours",
+  "date_echance": "02/15/17",
+  "iban": "",
+  "bic": ""
+}
