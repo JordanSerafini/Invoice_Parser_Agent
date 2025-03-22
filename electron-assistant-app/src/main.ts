@@ -30,8 +30,8 @@ function createWindow() {
     x: xPosition,
     y: yPosition,
     frame: false,        // Sans bordure
-    transparent: false,  // Désactiver la transparence pour éviter les problèmes de rendu
-    backgroundColor: '#f0f0f0',
+    transparent: true,   // Activer la transparence pour éviter les coins blancs
+    backgroundColor: '#00000000', // Fond transparent
     alwaysOnTop: true,   // Toujours au-dessus
     resizable: false,    // Non redimensionnable
     webPreferences: {
