@@ -1,0 +1,8 @@
+pytesseract
+pillow
+transformers
+python-dotenv
+huggingface_hub
+bitsandbytes
+accelerate
+einops 

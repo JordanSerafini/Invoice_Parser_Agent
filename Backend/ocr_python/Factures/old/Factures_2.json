@@ -1,0 +1,28 @@
+{
+    "numero_facture": "FACTURATION 123",
+    "date_facture": "02/15/16",
+    "nom_fournisseur": "Vous Logo",
+    "adresse_fournisseur": "100001, rue Principale, 123, rue Principale, Hamilton, OH 44416",
+    "articles": [
+        {
+            "description": "Consultation",
+            "quantity": 1,
+            "prix_unitaire_ht": 150,
+            "montant_ht": 150
+        },
+        {
+            "description": "Design",
+            "quantity": 7,
+            "prix_unitaire_ht": 80,
+            "montant_ht": 560
+        }
+    ],
+    "remise": 0,
+    "total_ht": 740,
+    "total_tva": 29.12,
+    "total_ttc": 769.12,
+    "mode_reglement": "NET 30 DAYS",
+    "date_echaance": "",
+    "iban": "",
+    "bic": ""
+}

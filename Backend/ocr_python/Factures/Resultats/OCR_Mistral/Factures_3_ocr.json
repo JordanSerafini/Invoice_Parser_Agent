@@ -1,0 +1,40 @@
+{
+    "numero_facture": "2021-21396-000009",
+    "date_facture": "17/10/2021",
+    "nom_fournisseur": "Domaine des Saies Gîtes et chambres d'hôtes au château",
+    "adresse_fournisseur": "82120 MAUROUX Réservations +33 51 39 41 17  contact@domaine-des-saies.com",
+    "articles": [
+        {
+            "description": "Hébergement du je 14 Oct au di 17 Oct",
+            "quantite": 1,
+            "prix_unitaire_ht": 293.64,
+            "montant_ht": 293.64
+        },
+        {
+            "description": "Supplément animal de compagnie",
+            "quantite": 1,
+            "prix_unitaire_ht": 30.0,
+            "montant_ht": 30.0
+        },
+        {
+            "description": "Ménage fin de séjour",
+            "quantite": 1,
+            "prix_unitaire_ht": 75.0,
+            "montant_ht": 75.0
+        },
+        {
+            "description": "Chauffage",
+            "quantite": 92,
+            "prix_unitaire_ht": 0.19,
+            "montant_ht": 17.48
+        }
+    ],
+    "remise": 0,
+    "total_ht": 492.58,
+    "total_tva": 611.9,
+    "total_ttc": 673.48,
+    "mode_reglement": "acceptant le règlement des sommes dues par chèque ou carte bancaire en sa qualité de membre d'un centre de gestion agréé par l'administration fiscale",
+    "date_echéance": null,
+    "iban": null,
+    "bic": null
+}

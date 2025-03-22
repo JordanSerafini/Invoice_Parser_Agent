@@ -1,0 +1,58 @@
+{
+    "numero_facture": "N FACDEMO 2022001",
+    "date_facture": "01/01/2022",
+    "nom_fournisseur": "Fan Teste",
+    "adresse_fournisseur": "236 av. de la République 49800 TRÉLAZÉ PEINTURE",
+    "articles": [
+        {
+            "description": "Coinbar",
+            "quantity": 1,
+            "prix_unitaire_ht": 501.73,
+            "montant_ht": 501.73
+        },
+        {
+            "description": "Dépôts de l'ancienne moquette",
+            "quantity": 1,
+            "prix_unitaire_ht": 3000,
+            "montant_ht": 3000
+        },
+        {
+            "description": "Cloisons de séparation",
+            "quantity": 1,
+            "prix_unitaire_ht": 134,
+            "montant_ht": 134
+        },
+        {
+            "description": "Isolation GR8O",
+            "quantity": 1,
+            "prix_unitaire_ht": 923,
+            "montant_ht": 923
+        },
+        {
+            "description": "Salle à l'étage",
+            "quantity": 1,
+            "prix_unitaire_ht": 2229.9,
+            "montant_ht": 2229.9
+        },
+        {
+            "description": "Pose d'un nouveau revêtement de sol spécial restaurant",
+            "quantity": 1,
+            "prix_unitaire_ht": 30,
+            "montant_ht": 30
+        },
+        {
+            "description": "Application d'un ragréage",
+            "quantity": 1,
+            "prix_unitaire_ht": 369.9,
+            "montant_ht": 369.9
+        }
+    ],
+    "remise": 0,
+    "total_ht": 345163,
+    "total_tva": 0,
+    "total_ttc": 345163,
+    "mode_reglement": "Chèque, Espèces",
+    "date_echéance": "06/03/2022",
+    "iban": "",
+    "bic": ""
+}

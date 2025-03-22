@@ -1,0 +1,4 @@
+{
+    "erreur": "JSON mal formaté",
+    "texte": "```json\n{\n    \"numéro_facture\": \"FR-123456789\",\n    \"date_facture\": \"2022/01/01\",\n    \"nom_fournisseur\": \"Acme Inc.\",\n    \"adresse_fournisseur\": \"123 Main St., Suite A, New York NY 12345\",\n    \"articles\": [\n        {\n            \"description\": \"Widgets\",\n            \"quantité\": 10,\n            \"prix_unitaire_ht\": 10.00,\n            \"montant_ht\": 100.00\n        },\n        {\n            \"description\": \"Gadgets\",\n            \"quantité\": 5,\n            \"prix_unitaire_ht\": 20.00,\n            \"montant"
+}
