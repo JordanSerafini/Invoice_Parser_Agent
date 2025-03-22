@@ -1,0 +1,46 @@
+{
+    "résultat_final": {
+        "numero_facture": "1234567890",
+        "date_facture": "2023-02-15",
+        "nom_fournisseur": "Vous Logo",
+        "adresse_fournisseur": "FACTURATION 123, rue Principale 100001",
+        "articles": [
+            {
+                "description": "Consultation",
+                "quantity": 1,
+                "prix_unitaire_ht": 150,
+                "montant_ht": 150
+            },
+            {
+                "description": "Design",
+                "quantity": 7,
+                "prix_unitaire_ht": 80,
+                "montant_ht": 560
+            }
+        ],
+        "remise": -30,
+        "total_ht": 680,
+        "total_tva": 25.84,
+        "total_ttc": 705.84,
+        "mode_reglement": "NET",
+        "date_echaance": null,
+        "iban": null,
+        "bic": null
+    },
+    "notes_confiance": {
+        "numero_facture": 0.7,
+        "date_facture": 0.7,
+        "nom_fournisseur": 0.7,
+        "adresse_fournisseur": 0.7,
+        "articles": 0.7,
+        "remise": 0.7,
+        "total_ht": 0.7,
+        "total_tva": 0.7,
+        "total_ttc": 0.7,
+        "mode_reglement": 0.7,
+        "date_echaance": 0.7,
+        "iban": 0.7,
+        "bic": 0.7
+    },
+    "confiance_globale": 0.6
+}

@@ -1,0 +1,28 @@
+{
+    "numero_facture": "FR-123456789",
+    "date_facture": "25/05/2022",
+    "nom_fournisseur": "Acme Inc.",
+    "adresse_fournisseur": "123 Main St., Suite A, New York NY 12345",
+    "articles": [
+        {
+            "description": "Widgets",
+            "quantity": 10,
+            "prix_unitaire_ht": 10.0,
+            "montant_ht": 100.0
+        },
+        {
+            "description": "Gadgets",
+            "quantity": 5,
+            "prix_unitaire_ht": 20.0,
+            "montant_ht": 100.0
+        }
+    ],
+    "remise": -5.0,
+    "total_ht": 200.0,
+    "total_tva": 25.0,
+    "total_ttc": 225.0,
+    "mode_reglement": "Paiement par carte crédit",
+    "date_echaance": "25/06/2022",
+    "iban": "frxx xxxx xx xx xx xx",
+    "bic": "123456789"
+}

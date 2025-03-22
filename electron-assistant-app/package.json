@@ -1,0 +1,19 @@
+{
+  "name": "electron-assistant-app",
+  "version": "1.0.0",
+  "description": "Assistant flottant de type chatbot discret",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "npm run build && electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.17.25",
+    "electron": "^29.4.6",
+    "typescript": "^5.8.2"
+  }
+}

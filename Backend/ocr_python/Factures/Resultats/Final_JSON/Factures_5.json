@@ -1,0 +1,46 @@
+{
+    "résultat_final": {
+        "numero_facture": "FR-123456789",
+        "date_facture": "25/05/2022",
+        "nom_fournisseur": "Acme Inc.",
+        "adresse_fournisseur": "123 Main St., Suite A, New York NY 12345",
+        "articles": [
+            {
+                "description": "Widgets",
+                "quantity": 10,
+                "prix_unitaire_ht": 10.0,
+                "montant_ht": 100.0
+            },
+            {
+                "description": "Gadgets",
+                "quantity": 5,
+                "prix_unitaire_ht": 20.0,
+                "montant_ht": 100.0
+            }
+        ],
+        "remise": -5.0,
+        "total_ht": 200.0,
+        "total_tva": 25.0,
+        "total_ttc": 225.0,
+        "mode_reglement": "Paiement par carte crédit",
+        "date_echaance": "25/06/2022",
+        "iban": "frxx xxxx xx xx xx xx",
+        "bic": "123456789"
+    },
+    "notes_confiance": {
+        "numero_facture": 0.7,
+        "date_facture": 0.7,
+        "nom_fournisseur": 0.7,
+        "adresse_fournisseur": 0.7,
+        "articles": 0.7,
+        "remise": 0.7,
+        "total_ht": 0.7,
+        "total_tva": 0.7,
+        "total_ttc": 0.7,
+        "mode_reglement": 0.7,
+        "date_echaance": 0.7,
+        "iban": 0.7,
+        "bic": 0.7
+    },
+    "confiance_globale": 0.6
+}
