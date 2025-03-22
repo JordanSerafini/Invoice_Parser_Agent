@@ -35,6 +35,12 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 const electron_1 = require("electron");
 const path = __importStar(require("path"));
+// Désactiver complètement l'accélération matérielle
+electron_1.app.disableHardwareAcceleration();
+// Configuration pour utiliser le rendu logiciel uniquement
+electron_1.app.commandLine.appendSwitch('disable-gpu');
+electron_1.app.commandLine.appendSwitch('disable-software-rasterizer');
+electron_1.app.commandLine.appendSwitch('in-process-gpu');
 let mainWindow = null;
 function createWindow() {
     // Obtenir les dimensions de l'écran
@@ -52,7 +58,8 @@ function createWindow() {
         x: xPosition,
         y: yPosition,
         frame: false, // Sans bordure
-        transparent: true, // Fond transparent
+        transparent: false, // Désactiver la transparence pour éviter les problèmes de rendu
+        backgroundColor: '#f0f0f0',
         alwaysOnTop: true, // Toujours au-dessus
         resizable: false, // Non redimensionnable
         webPreferences: {

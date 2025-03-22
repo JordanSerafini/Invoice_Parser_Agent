@@ -1,6 +1,14 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 
+// Désactiver complètement l'accélération matérielle
+app.disableHardwareAcceleration();
+
+// Configuration pour utiliser le rendu logiciel uniquement
+app.commandLine.appendSwitch('disable-gpu');
+app.commandLine.appendSwitch('disable-software-rasterizer');
+app.commandLine.appendSwitch('in-process-gpu');
+
 let mainWindow: BrowserWindow | null = null;
 
 function createWindow() {
@@ -22,7 +30,8 @@ function createWindow() {
     x: xPosition,
     y: yPosition,
     frame: false,        // Sans bordure
-    transparent: true,   // Fond transparent
+    transparent: false,  // Désactiver la transparence pour éviter les problèmes de rendu
+    backgroundColor: '#f0f0f0',
     alwaysOnTop: true,   // Toujours au-dessus
     resizable: false,    // Non redimensionnable
     webPreferences: {
