@@ -78,6 +78,12 @@ function createWindow() {
         mainWindow = null;
     });
 }
+// Écouteur d'événement IPC pour fermer la fenêtre
+electron_1.ipcMain.on('close-window', () => {
+    if (mainWindow) {
+        mainWindow.close();
+    }
+});
 // Quand Electron est prêt
 electron_1.app.whenReady().then(() => {
     createWindow();

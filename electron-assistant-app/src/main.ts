@@ -1,4 +1,4 @@
-import { app, BrowserWindow, screen } from 'electron';
+import { app, BrowserWindow, screen, ipcMain } from 'electron';
 import * as path from 'path';
 
 // Désactiver complètement l'accélération matérielle
@@ -53,6 +53,13 @@ function createWindow() {
     mainWindow = null;
   });
 }
+
+// Écouteur d'événement IPC pour fermer la fenêtre
+ipcMain.on('close-window', () => {
+  if (mainWindow) {
+    mainWindow.close();
+  }
+});
 
 // Quand Electron est prêt
 app.whenReady().then(() => {

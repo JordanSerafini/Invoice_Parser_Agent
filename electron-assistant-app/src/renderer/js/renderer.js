@@ -1,10 +1,10 @@
+// Importer l'API ipcRenderer d'Electron
+const { ipcRenderer } = require('electron');
+
 // Gérer le bouton de fermeture
 document.getElementById('close-btn').addEventListener('click', () => {
-  // En Electron, window.close() ne fonctionne pas toujours
-  // Nous utilisons donc l'API IPC pour envoyer un signal au processus principal
-  // Mais comme nous n'avons pas configuré IPC pour cet exemple simple, 
-  // nous utilisons window.close() comme solution temporaire
-  window.close();
+  // Utiliser IPC pour envoyer un message au processus principal pour fermer la fenêtre
+  ipcRenderer.send('close-window');
 });
 
 // Animation de bienvenue
